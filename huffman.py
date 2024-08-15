@@ -155,6 +155,7 @@ def main():
     read_encoded_bits('encoded_bytes.bin',bin_to_encoded_file)
     decode_file(bin_to_encoded_file,decoded_from_bin,tree)
     print("elapsed time: " + str(end-start) + " seconds")
+    print("a")
    
 
 if __name__ == "__main__":
