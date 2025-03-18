@@ -1,37 +1,35 @@
-# Text Compression Algortihms
- 
-# Huffman, LZ77 ve LZ78 Algoritmaları
+# Huffman, LZ77, and LZ78 Algorithms
 
-Bu proje, veri sıkıştırma tekniklerinden Huffman, LZ77 ve LZ78 algoritmalarını içeren Python kodlarını içerir. Her algoritma için ilgili Python dosyaları mevcuttur.
+This project contains Python implementations of Huffman, LZ77, and LZ78 compression algorithms. Each algorithm has its own Python file.
 
-## Dosyalar ve İçerikleri
+## Files and Their Contents
 
-### 1. Huffman Algoritması (`huffman.py`)
-Bu dosya, Huffman kodlamasını kullanarak metin sıkıştırma ve açma işlemlerini gerçekleştirir.
+### 1. Huffman Algorithm (`huffman.py`)
+This file implements Huffman encoding for text compression and decompression.
 
-**Özellikler:**
-- Metin dosyalarındaki karakter frekanslarını hesaplar.
-- Huffman ağacını oluşturur ve karakterler için Huffman kodlarını belirler.
-- Veriyi Huffman kodlarıyla sıkıştırır ve sıkıştırılmış dosyayı oluşturur.
-- Sıkıştırılmış dosyayı açarak orijinal metni geri getirir.
-- Bit seviyesinde dosya sıkıştırma ve açma işlemleri de desteklenir.
+**Features:**
+- Calculates character frequencies in text files.
+- Builds a Huffman tree and generates Huffman codes for characters.
+- Compresses data using Huffman codes and creates a compressed file.
+- Decompresses the compressed file to restore the original text.
+- Supports bit-level compression and decompression.
 
-**Kullanım:**
+**Usage:**
 ```sh
 python huffman.py
 ```
 
 ---
 
-### 2. LZ78 Algoritması (`lz78.py`)
-Bu dosya, LZ78 algoritmasını kullanarak veri sıkıştırma ve açma işlemlerini yapar.
+### 2. LZ78 Algorithm (`lz78.py`)
+This file implements the LZ78 compression and decompression algorithm.
 
-**Özellikler:**
-- Metin dosyalarını LZ78 algoritması ile sıkıştırır.
-- Sıkıştırılmış veriyi çözerek orijinal içeriği geri yükler.
-- Kodlama ve kod çözme işlemlerini dosya bazlı gerçekleştirir.
+**Features:**
+- Compresses text files using the LZ78 algorithm.
+- Decompresses compressed data to restore the original content.
+- Performs encoding and decoding operations on a file basis.
 
-**Kullanım:**
+**Usage:**
 ```python
 encodeLZ('input.txt', 'encoded.txt')
 decodeLZ('encoded.txt', 'decoded.txt')
@@ -39,28 +37,27 @@ decodeLZ('encoded.txt', 'decoded.txt')
 
 ---
 
-### 3. LZ77 Algoritması (`LZ77.py`)
-Bu dosya, LZ77 algoritmasını kullanarak veri sıkıştırma ve açma işlemlerini gerçekleştirir.
+### 3. LZ77 Algorithm (`LZ77.py`)
+This file implements the LZ77 compression and decompression algorithm.
 
-**Özellikler:**
-- Sliding window (kaydırmalı pencere) mekanizması ile veri sıkıştırma yapar.
-- Dosya bazlı sıkıştırma ve açma işlemlerini destekler.
-- Sıkıştırılmış veriyi ikili formatta saklar.
+**Features:**
+- Uses a sliding window mechanism for data compression.
+- Supports file-based compression and decompression.
+- Stores compressed data in binary format.
 
-**Kullanım:**
+**Usage:**
 ```python
 compressor = LZ77Compressor()
 compressor.compress('input.txt', 'compressed.lz77')
 compressor.decompress('compressed.lz77', 'output.txt')
 ```
 
-## Gereksinimler
-Bu kodların çalışması için aşağıdaki bağımlılıkların yüklenmiş olması gerekmektedir:
+## Requirements
+The following dependencies must be installed for these scripts to work:
 ```sh
 pip install bitarray
 ```
 
-## Lisans
-Bu proje açık kaynaklıdır ve herhangi bir lisans kısıtlaması bulunmamaktadır.
-
+## License
+This project is open-source and has no licensing restrictions.
 
